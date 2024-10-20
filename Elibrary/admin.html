@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>County Library</title>
+    <style>
+        .body-buttons button:hover {
+            background-color: hsl(204, 82%, 29%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>County Library</h1>
+        <nav class="nav-links">
+            <ul class="inner-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <form id="addBookForm">
+        <input type="text" id="bookTitle" placeholder="Book Title" required>
+        <input type="text" id="bookAuthor" placeholder="Book Author" required>
+        <button type="submit">Add Book</button>
+    </form> -->
+    
+    <div id="bookList"></div>
+
+    <!-- <script>
+        document.getElementById('addBookForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent the form from reloading the page
+        
+            // Retrieve form data
+            const title = document.getElementById('bookTitle').value;
+            const author = document.getElementById('bookAuthor').value;
+        
+            // Prepare data for sending
+            const formData = new FormData();
+            formData.append('title', title);
+            formData.append('author', author);
+        
+            // Send the data via fetch to addBook.php
+            fetch('addBook.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())  // Parse the response as JSON
+            .then(data => {
+                if (data.status === 'success') {
+                    // If successful, add the book to the list
+                    const bookCard = document.createElement('div');
+                    bookCard.innerHTML = `
+                        <p><strong>Title:</strong> ${title}</p>
+                        <p><strong>Author:</strong> ${author}</p>
+                    `;
+                    document.getElementById('bookList').appendChild(bookCard);
+        
+                    // Clear the form fields
+                    document.getElementById('bookTitle').value = '';
+                    document.getElementById('bookAuthor').value = '';
+                } else {
+                    console.error('Error:', data.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+        </script> -->
+        
+</body>
+</html>
+
+</body>
+</html>
